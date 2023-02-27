@@ -1,0 +1,71 @@
+// Generated using webpack-cli https://github.com/webpack/webpack-cli
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const isProduction = process.env.NODE_ENV == 'production';
+
+
+const config = {
+    entry: path.resolve(__dirname, './src/index.js'),
+
+    output: {
+        filename: "main-[hash:8].js",
+        path: path.resolve(__dirname, './dist'),
+        assetModuleFilename: 'images/[hash][ext][query]'
+
+    },
+    devServer: {
+        open: true,
+        host: 'localhost',
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+        }),
+
+        // Add your plugins here
+        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/i,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            },
+            {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: ['html-loader'],
+            },
+            {
+                test: /\.(scss|css)$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/resource',
+            },
+
+            // Add your rules for custom modules here
+            // Learn more about loaders from https://webpack.js.org/loaders/
+        ]
+    }
+};
+
+module.exports = () => {
+    if (isProduction) {
+        config.mode = 'production';
+
+
+    } else {
+        config.mode = 'development';
+    }
+    return config;
+};
