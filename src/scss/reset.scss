@@ -54,12 +54,19 @@ button::-moz-focus-inner {
 a,
 a:visited {
 	text-decoration: none;
+	color: #000000;
 }
 a:hover {
 	text-decoration: none;
+	color: #000000;
 }
-ul li {
-	list-style: none;
+ul,
+ol {
+	list-style-type: none;
+}
+
+li {
+	display: block;
 }
 img {
 	vertical-align: top;
