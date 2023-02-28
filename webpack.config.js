@@ -29,11 +29,6 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/i,
-                exclude: /node_modules/,
-                use: ['babel-loader'],
-            },
-            {
                 test: /\.html$/,
                 exclude: /node_modules/,
                 use: ['html-loader'],
