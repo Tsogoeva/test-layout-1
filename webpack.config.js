@@ -10,9 +10,8 @@ const config = {
     entry: path.resolve(__dirname, './src/index.js'),
 
     output: {
-        filename: "main-[hash:8].js",
+        filename: "main.js",
         path: path.resolve(__dirname, './dist'),
-        assetModuleFilename: 'images/[hash][ext][query]'
 
     },
     devServer: {

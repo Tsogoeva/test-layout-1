@@ -1,5 +1,5 @@
 {
-  "name": "my-webpack-project",
+  "name": "test-layout-1",
   "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "author": "TsogoevaTS",
   "license": "ISC",
-  "description": "My webpack project",
+  "description": "",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
