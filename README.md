@@ -1,15 +1,37 @@
-# 🚀 Welcome to your new awesome project!
+Вёрстка Макета в учебных целях
+============
+Супер Кресло
+--------------
 
-This project has been created using **webpack-cli**, you can now run
+<img src="./readme-source/screenshot1.png" width="800">
 
-```
-npm run build
-```
+------------
+### Использовано:
+* HTML5
+* SASS
+* Flexbox
+* Webpack
+* Figma
+____________
 
-or
+### Установка и запуск:
+* `npm ci`
+* `npm run build`
+* `npm run serve`
 
-```
-yarn build
-```
+____________
 
-to bundle your application
+
+<img src="./readme-source/screenshot2.png" width="800">
+
+___________
+### Рефакторинг:
+- [ ] Добавить линтер
+- [ ] Задействовать больше возможностей SCSS
+  - [ ] Переменные
+  - [ ] Расширение
+- [ ] Добавить больше Адаптивности
+
+
+
+<img src="./readme-source/screenshot3.png" width="800">
